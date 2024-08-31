@@ -1,0 +1,95 @@
+.albumSection{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.albumContent{
+    width: 80%;
+}
+
+/* Style for album header */
+
+.albumHeader{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.albumHeading{
+    font-size: 2rem;
+    color: rebeccapurple;
+}
+
+.AlbumButton{
+    /* color: blue; */
+    border: 2px solid currentColor;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.backButton{
+    width: 44px;
+    height: 44px;
+    background-color: #fcfcfc;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0,0,0,.24);
+    cursor: pointer;
+    text-align: center;
+    padding-top: 4px;
+    box-sizing: border-box;
+}
+
+
+/* container */
+
+.albumContentContainer{
+    padding: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.album{
+    width: 180px;
+    height: 190px;
+    background-color: lavender;
+    color: green;
+    margin: 12px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.album:hover{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.album p{
+    width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.albumName{
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: capitalize;
+}

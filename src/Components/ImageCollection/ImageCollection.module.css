@@ -1,0 +1,69 @@
+.photoSection{
+    margin: 44px 0;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    padding: 0 14px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.photoContainer{
+    display: inline-block;
+    width: 48%;
+    height: 300px;
+    margin: 24px 0;
+    position: relative;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.imageLabel{
+    line-height: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    padding: 6px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+}
+
+.buttons{
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: -55px;
+    width: 120px;
+    height: 30px;
+    display: none;
+}
+
+.buttons div{
+    width: 40%;
+    box-sizing: border-box;
+    margin: 4px;
+}
+
+.buttons div img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.photoContainer:hover .buttons{
+    display: flex;
+    z-index: 100;
+    position: absolute;
+}
+
+.imageCount{
+    position: absolute;
+    top: -38px;
+    left: 45%;
+    color: gray;
+    font-size: small;
+}

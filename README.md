@@ -10,9 +10,8 @@ PhotoFolio is an online photo album React app designed for learning purposes. It
 
 ## Demo
 
-![Demo GIF](https://github.com/mohitrajputt/photofolio/blob/e617b04e96f3eb4a79ccfbf35f0d78884ac82330/public/demo.gif)
+![Demo GIF](https://github.com/mayank7456/photofolio/blob/e617b04e96f3eb4a79ccfbf35f0d78884ac82330/public/demo.gif)
 
-[Live Demo](#) - (https://mohitrajputt.github.io/photofolio/)
 
 ## Installation
 
@@ -33,10 +32,7 @@ To run this project locally, follow these steps:
 
 Contributions are welcome! Feel free to submit issues or pull requests.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-For any questions or feedback, (mailto: 999mohitrajput@gmail.com).
+For any questions or feedback, (mailto: tomarmayank219@gmail.com).

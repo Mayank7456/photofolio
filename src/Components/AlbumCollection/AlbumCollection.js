@@ -13,7 +13,7 @@ const AlbumCollection = ({handleAlbumForm,albumFormStatus,album,handleSwitchRend
                     {album.map((albumData,id) => (
                         <div key={id} className={styles.album} onClick={ () => handleSwitchRender(albumData)} >
                             <img src={thumbnail} width="80%" alt="img-thumbnail" />
-                            <p>{albumData.albumName}</p>
+                            <p>{albumData.album || albumData.albumName}</p>
                         </div>
                     ))}
                     {album.length === 0 ? <p>😒 No item!, Add new album</p> : null}

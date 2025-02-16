@@ -5,13 +5,14 @@ import { getFirestore } from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDB17T-begUSf_0HUPaYa0ZCYMwJuGtBsg",
-  authDomain: "photofolio-e720d.firebaseapp.com",
-  projectId: "photofolio-e720d",
-  storageBucket: "photofolio-e720d.firebasestorage.app",
-  messagingSenderId: "785124796822",
-  appId: "1:785124796822:web:1044b28fdaefcaeb7515b7"
+  apiKey: "AIzaSyCqsQkX5OCS2-c0aCzxP0ggPexkVlSm1Vs",
+  authDomain: "photofolio-fdd94.firebaseapp.com",
+  projectId: "photofolio-fdd94",
+  storageBucket: "photofolio-fdd94.firebasestorage.app",
+  messagingSenderId: "693520980629",
+  appId: "1:693520980629:web:913350eaf46db54036199c"
 };
 
 // Initialize Firebase

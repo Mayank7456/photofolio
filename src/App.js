@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { useEffect, useState } from "react"
 import {db} from "./FirebaseConfig";
-import { collection, addDoc, onSnapshot } from "firebase/firestore";
+import { collection, addDoc, onSnapshot, doc, setDoc } from "firebase/firestore";
 
 import {albumOfflineData} from "./OfflineData";
 
@@ -18,7 +18,7 @@ function App() {
   const [albumFormStatus,setAlbumFormStatus] = useState(false);
   const [imageFormStatus,setImageFormStatus] = useState(false);
   // Album
-  const [album,setAlbum] = useState(albumOfflineData);
+  const [album,setAlbum] = useState([]);
   const [currentAlbum, setCurrentAlbum] = useState(null);
   const [albumData, setAlbumData] = useState(currentAlbum);
 
@@ -37,26 +37,32 @@ function App() {
 
   // Handle Album Creation
   async function CreateAlbum(albumName) {
-    // await addDoc(collection(db, "albums"), {
-    //   album: albumName
-    // });
+    const albumRef = await addDoc(collection(db, "albums"), {
+      album: albumName
+    });
+    // const photosRef = doc(collection(db, "albums", albumRef.id, "photos")); 
+  //   await setDoc(photosRef, {
+  //     title: "Test",
+  //     url: "https://picsum.photos/200/300?grayscale"
+  // });
+
     // setAlbum(albumName);
     setAlbum([...album,{albumName: albumName}]);
     toast.success("New Album Created !");
   }
 
   // Render Album Data
-  // useEffect(() => {
-  //   onSnapshot(collection(db, "albums"), (snapShot) => {
-  //     const albums = snapShot.docs.map((doc) => {
-  //       return {
-  //         id: doc.id,
-  //         ...doc.data()
-  //       }
-  //     })
-  //     setAlbum(albums);
-  //   })
-  // },[]);
+  useEffect(() => {
+    onSnapshot(collection(db, "albums"), (snapShot) => {
+      const albums = snapShot.docs.map((doc) => {
+        return {
+          id: doc.id,
+          ...doc.data()
+        }
+      })
+      setAlbum(albums);
+    })
+  },[]);
 
   // Handle Switching Actually i button to open album data
   function handleSwitchRender(C_Album) {
@@ -66,10 +72,17 @@ function App() {
 
   // Add Image
   async function AddPhoto(photoData) {
-    // const photoRef = collection(db, "albums", album.id, "photos");
-    // await addDoc(photoRef, photoData);
+    if (!currentAlbum || !currentAlbum.id) {
+      return;
+    }
+    try {
+      const photoRef = collection(db, "albums", currentAlbum.id, "photos");
+      await addDoc(photoRef, photoData);
+    } catch (error) {
+      console.log(photoData, album, error)
+    }
     // setAlbum([...album,{album}]);
-    toast.warning("Something Went Wrong !");
+    // toast.warning("Something Went Wrong !");
   }
 
   return (

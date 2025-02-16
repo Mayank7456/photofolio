@@ -6,7 +6,6 @@ const AlbumForm = ({CreateAlbum}) => {
 
     function handleSubmit(e){
         e.preventDefault();
-
         CreateAlbum(albumRef.current.value);
         albumRef.current.value = "";
     }

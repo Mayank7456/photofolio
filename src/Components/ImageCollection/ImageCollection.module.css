@@ -13,7 +13,7 @@
 .photoContainer{
     display: inline-block;
     width: 48%;
-    height: 300px;
+    /* height: 300px; */
     margin: 24px 0;
     position: relative;
     cursor: pointer;
@@ -66,4 +66,10 @@
     left: 45%;
     color: gray;
     font-size: small;
+}
+
+.photo {
+    object-fit: cover;
+    height: auto;
+    object-position: top;
 }

@@ -55,3 +55,15 @@
     line-height: 50px;
     cursor: pointer;
 }
+
+.ImageView {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ImageView img {
+    width: auto;
+    height: 100%;
+}

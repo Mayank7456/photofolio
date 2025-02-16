@@ -61,11 +61,13 @@ const Photos = ({currentAlbum}) => {
             {photos && photos.map((photo,id) => (
               <div className={styles.photoContainer} key={id} onClick={() => handleImageView(id)} >
                     <div className={styles.buttons} >
-                      <div><img src={deleteIcon} alt="dlt" onClick={(e) => { e.stopPropagation(); handleDelete(photo.id)}} /></div>
+                      <div>
+                        <img src={deleteIcon} alt="dlt" onClick={(e) => { e.stopPropagation(); handleDelete(photo.id)}} />
+                        </div>
                       {/* <div><img src="edit.png" alt="edit" onClick={(e) => { e.stopPropagation(); handleUpdate(photo.id)}} /></div> */}
                     </div>
                     {photo.url ?<>
-                    <img src={photo.url} width="100%" height="100%" alt="img-thumbnail" />
+                    <img className={styles.photo}  src={photo.url} width="100%" height="100%" alt="img-thumbnail" />
                     <p className={styles.imageLabel} >{id+1}</p></> : null }
               </div>
             ))}
